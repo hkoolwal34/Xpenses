@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="xpenses.xpenses.MainActivity">
+
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/label_date_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/label_this_month"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="23dp"
+                    android:text="Today's Date"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/date_today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/label_date_today"
+                    android:layout_below="@+id/label_date_today"
+                    android:layout_marginTop="25dp"
+                    android:text="Sample Date"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/label_last7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/last7"
+                    android:layout_alignStart="@+id/label_this_month"
+                    android:layout_marginBottom="26dp"
+                    android:text="Last 7 Days"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/last7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/label_this_month"
+                    android:layout_alignStart="@+id/this_month"
+                    android:layout_marginBottom="52dp"
+                    android:text="Sample 7 Days"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/label_this_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="This Month"
+                    android:textSize="30dp"
+                    android:layout_above="@+id/this_month"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/this_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="42dp"
+                    android:text="Sample month"
+                    android:textSize="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+        </FrameLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+
+</LinearLayout>
