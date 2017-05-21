@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="xpenses.xpenses.New">
+
+
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="278dp"
+        android:id="@+id/linearLayout8"
+        android:layout_below="@+id/linearLayout10"
+        android:layout_alignStart="@+id/linearLayout10"
+        android:layout_marginTop="19dp">
+
+        <TextView
+            android:id="@+id/label_payment_mode_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Mode"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="390dp" />
+
+        <Spinner
+            android:id="@+id/spinner_payment_mode_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="261dp"
+            tools:layout_editor_absoluteY="390dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="42dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout9">
+
+        <TextView
+            android:id="@+id/label_date_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/linearLayout8"
+            android:layout_weight="1"
+            android:text="Date"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/date_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView6"
+            android:layout_marginStart="34dp"
+            android:layout_toEndOf="@+id/textView6"
+            android:layout_weight="1"
+            android:text="Sample Date"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton_date_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView7"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/textView7"
+            android:layout_weight="1"
+            app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearLayout9"
+        android:layout_alignStart="@+id/linearLayout9"
+        android:layout_marginTop="21dp"
+        android:id="@+id/linearLayout10">
+        <TextView
+            android:id="@+id/label_amount_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayout8"
+            android:layout_alignStart="@+id/linearLayout8"
+            android:text="Amount"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/amount_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            android:inputType="numberSigned"
+            android:layout_alignTop="@+id/textView8"
+            android:layout_alignParentEnd="true" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayout8"
+        android:layout_alignStart="@+id/linearLayout8"
+        android:layout_marginTop="39dp"
+        android:id="@+id/linearLayout11">
+
+        <TextView
+            android:id="@+id/label_comments_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/linearLayout8"
+            android:layout_below="@+id/linearLayout8"
+            android:text="Comments"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/comments_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView9"
+            android:layout_below="@+id/textView9"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_submit_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/linearLayout11"
+        android:layout_below="@+id/linearLayout11"
+        android:layout_marginTop="37dp"
+        android:text="Submit" />
+
+</RelativeLayout>

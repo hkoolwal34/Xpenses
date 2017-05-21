@@ -1,11 +1,14 @@
 package xpenses.xpenses;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -44,15 +47,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mTextMessage = (TextView) findViewById(R.id.label_date_today);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         db = new DatabaseHandler(this);
 
-//        Date d=new Date(2017,5,17);
-//        db.addRecord(new Record(d,120,"Cash","None"));
-//        db.addRecord(new Record(d,20,"SBI","9685815170"));
-//        db.addRecord(new Record(d,30,"Paytm","9685815170"));
+        Date d=new Date(2017,5,19);
+        db.addRecord(new Record(d,1000,"Cash","Testing"));
+        db.addRecord(new Record(d,50,"Card","Testing"));
+        db.addRecord(new Record(d,3000,"Paytm","Tesing"));
 
         Log.d("Reading","Reading all records");
         List<Record> records = db.getAllRecords();
@@ -64,6 +65,16 @@ public class MainActivity extends AppCompatActivity {
 
         }
         Log.d("numofrecords : ",String.valueOf(i));
+
+        Button b= (Button) findViewById(R.id.button4);
+
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),New.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
